@@ -56,7 +56,9 @@ export default function Home() {
 								checked={todo.is_done}
 								onChange={() => toggleTodo(todo.id, todo.is_done)}
 							/>
-							{todo.title}
+							<span>
+								{todo.title}
+							</span>
 						</label>
 					</li>
 				))}
