@@ -20,7 +20,7 @@ export default function Home() {
 		const { data } = await supabase.from('todos').select('*').order('created_at', { ascending: false });
 		if (data) setTodos(data);
 	};
-	t
+	
 	const addTodo = async () => {
 		if (!newTodo) return;
 		await supabase.from('todos').insert({ title: newTodo });
